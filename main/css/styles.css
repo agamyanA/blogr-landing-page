@@ -87,10 +87,18 @@ body {
   background-image: url("/main/img/logo.svg");
   background-repeat: no-repeat;
 }
+.header__nav {
+  flex: 2;
+  display: flex;
+}
 .header__menu {
   flex: 2;
   display: flex;
   gap: 3rem;
+  align-self: center;
+}
+.header__auth {
+  text-align: right;
 }
 .header__bottom {
   flex: 2;

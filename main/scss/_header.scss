@@ -42,10 +42,20 @@
         background-repeat: no-repeat;
     }
 
+    &__nav {
+        flex: 2;
+        display: flex;
+    }
+
     &__menu {
         flex: 2;
         display: flex;
-        gap: 3rem
+        gap: 3rem;
+        align-self: center;
+    }
+
+    &__auth {
+        text-align: right;
     }
 
     &__bottom {

@@ -1,0 +1,57 @@
+@use 'var' as *;
+@import url('https://fonts.google.com/specimen/Overpass?preview.text_type=custom');
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    overflow-x: hidden;
+}
+
+.button {
+    padding: 0.6rem;
+    height: 43px;
+    width: 120px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    outline-style: unset;
+    cursor: pointer;
+}
+
+.button-transparent {
+    background: transparent;
+    color: $white;
+}
+
+.button-white {
+    background: $white;
+    color: $lightRed;
+
+        &:hover {
+            color: $white;
+            background: $veryLightRed;
+            transition: 200ms ease-in-out;
+        }
+}
+
+.button-border {
+    background: transparent;
+    color: $white;
+    border: 1px solid $white;
+
+        &:hover {
+            color: $lightRed;
+            background: $white;
+            transition: 200ms ease-in-out;
+        }
+}

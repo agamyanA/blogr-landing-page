@@ -1,0 +1,114 @@
+@use 'var' as *;
+@use 'mixins' as *;
+
+.header {
+
+    &__image {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to right, $veryLightRed , $lightRed);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 30rem;
+        border-bottom-left-radius: 6rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 150%;
+            background-image: url('/main/img/bg-pattern-intro.svg');
+            background-size: 115%;
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+    }
+
+    &__top {
+        display: flex;
+        padding: 1.5rem 5rem;
+        flex: 1;
+        position: relative;
+        align-items: center;
+    }
+
+    &__logo {
+        flex: 1;
+        height: 40px;
+        max-width: 150px;
+        background-image: url('/main/img/logo.svg');
+        background-repeat: no-repeat;
+    }
+
+    &__menu {
+        flex: 2;
+        display: flex;
+        gap: 3rem
+    }
+
+    &__bottom {
+        flex: 2;
+        position: relative;
+        align-self: center;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+        color: $white;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        font-size: 1.1rem;
+        color: $white;
+    }
+
+    &__buttons {
+        margin-top: 2.5rem;
+    }
+
+}
+
+.menu-item {
+
+    &__title {
+        color: $white;
+        cursor: pointer;
+    }
+
+    &__dropdown {
+        position: relative;
+        display: inline-block;
+
+            &:hover .menu-item__dropdown-content {
+                display: block;
+            }
+    }
+
+    &__dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+        border-radius: 4px;
+        padding: 1rem 0;
+        z-index: 1;
+
+            > a:hover {
+                font-weight: 750;
+            }
+    }
+
+    &__dropdown-item {
+        cursor: pointer;
+        color: $veryDarkBlackBlue;
+        padding: 0.675rem;
+        text-decoration: none;
+        display: block;
+        transition: font-weight 350ms ease-in-out;
+    }
+}

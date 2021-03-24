@@ -1,0 +1,7 @@
+node_modules
+design
+package-lock.json
+package.json
+README-template.md
+README.md
+style-guide.md

@@ -1,0 +1,60 @@
+@use 'var' as *;
+@use 'mixins' as *;
+
+.middle {
+    position: relative;
+    background-image: linear-gradient(to right, $veryDarkGrayBlue , $veryDarkDesaturatedBlue);
+    background-size: contain;
+    border-bottom-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url('/main/img/bg-pattern-circles.svg');
+        background-repeat: no-repeat;
+        background-position: -15rem -7rem;
+        transform: rotateX(180deg);
+    }
+
+    &__flex {
+        display: flex;
+        position: relative;
+        min-height: 20rem;
+    }
+
+    &__image {
+        position: relative;
+        flex: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 150%;
+            background-image: url('/main/img/illustration-phones.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 0 30%;
+            top: -25%;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        align-self: center;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 2rem;
+    }
+
+    &__description {
+        color: $white;
+        font-size: 1.0875rem;
+        line-height: 1.875;
+    }
+}

@@ -8,27 +8,24 @@
         display: flex;
         flex-direction: column;
         background-image: linear-gradient(to right, $veryLightRed , $lightRed);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        min-height: 30rem;
+        background-size: contain;
         border-bottom-left-radius: 6rem;
 
         &::before {
             content: "";
             position: absolute;
             height: 100%;
-            width: 150%;
+            width: 100%;
             background-image: url('/main/img/bg-pattern-intro.svg');
-            background-size: 115%;
+            background-size: 135%;
             background-repeat: no-repeat;
-            background-position: center right;
+            background-position: center left;
+            right: 0;
         }
     }
 
     &__top {
         display: flex;
-        padding: 1.5rem 5rem;
         flex: 1;
         position: relative;
         align-items: center;
@@ -68,18 +65,13 @@
     &__title {
         font-size: 3rem;
         color: $white;
-        margin-bottom: 0;
+        margin: 0 auto;
     }
 
     &__description {
         font-size: 1.1rem;
         color: $white;
     }
-
-    &__buttons {
-        margin-top: 2.5rem;
-    }
-
 }
 
 .menu-item {

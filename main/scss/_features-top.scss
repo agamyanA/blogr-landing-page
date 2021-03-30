@@ -1,0 +1,25 @@
+@use 'var' as *;
+@use 'mixins' as *;
+
+.features-top {
+    position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background-image: url('/main/img/illustration-editor-desktop.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            right: 0;
+        }
+        
+
+        &__title {
+            text-align: center;
+            color: $veryDarkBlue;
+            font-size: 2rem;
+        }
+}

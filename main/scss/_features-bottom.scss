@@ -1,0 +1,22 @@
+@use 'var' as *;
+@use 'mixins' as *;
+
+.features-bottom {
+    position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background-image: url('/main/img/illustration-laptop-desktop.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left center;
+            left: 0;
+        }
+}
+
+.content-right {
+    margin-left: 60%;
+}

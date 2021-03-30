@@ -2,6 +2,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *::before, *::after {
@@ -11,8 +12,28 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Overpass", sans-serif;
   overflow-x: hidden;
+  font-family: "Overpass", sans-serif;
+  overflow: visible;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.px {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.pt {
+  padding-top: 3rem;
+}
+
+.pb {
+  padding-bottom: 6rem;
 }
 
 .button {
@@ -57,25 +78,22 @@ body {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 30rem;
+  background-size: contain;
   border-bottom-left-radius: 6rem;
 }
 .header__image::before {
   content: "";
   position: absolute;
   height: 100%;
-  width: 150%;
+  width: 100%;
   background-image: url("/main/img/bg-pattern-intro.svg");
-  background-size: 115%;
+  background-size: 135%;
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center left;
+  right: 0;
 }
 .header__top {
   display: flex;
-  padding: 1.5rem 5rem;
   flex: 1;
   position: relative;
   align-items: center;
@@ -109,14 +127,11 @@ body {
 .header__title {
   font-size: 3rem;
   color: white;
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 .header__description {
   font-size: 1.1rem;
   color: white;
-}
-.header__buttons {
-  margin-top: 2.5rem;
 }
 
 .menu-item__title {
@@ -150,6 +165,153 @@ body {
   text-decoration: none;
   display: block;
   transition: font-weight 350ms ease-in-out;
+}
+
+.features-top {
+  position: relative;
+}
+.features-top::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-image: url("/main/img/illustration-editor-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  right: 0;
+}
+.features-top__title {
+  text-align: center;
+  color: #1f3f5b;
+  font-size: 2rem;
+}
+
+.middle {
+  position: relative;
+  background-image: linear-gradient(to right, #2c2d3f, #3f4164);
+  background-size: contain;
+  border-bottom-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+}
+.middle::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/main/img/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: -15rem -7rem;
+  transform: rotateX(180deg);
+}
+.middle__flex {
+  display: flex;
+  position: relative;
+  min-height: 20rem;
+}
+.middle__image {
+  position: relative;
+  flex: 1;
+}
+.middle__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background-image: url("/main/img/illustration-phones.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 30%;
+  top: -25%;
+}
+.middle__content {
+  flex: 1;
+  align-self: center;
+}
+.middle__title {
+  color: white;
+  font-size: 2rem;
+}
+.middle__description {
+  color: white;
+  font-size: 1.0875rem;
+  line-height: 1.875;
+}
+
+.features-bottom {
+  position: relative;
+}
+.features-bottom::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-image: url("/main/img/illustration-laptop-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  left: 0;
+}
+
+.content-right {
+  margin-left: 60%;
+}
+
+.content {
+  width: 40%;
+  padding-top: 2rem;
+}
+.content__title {
+  color: #1f3f5b;
+  font-size: 1.375rem;
+}
+.content__description {
+  color: #4b5862;
+  font-size: 1.0875rem;
+  line-height: 1.875;
+}
+
+.footer {
+  margin-top: 5rem;
+  background-color: #25252d;
+  border-top-right-radius: 6rem;
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.footer__logo {
+  height: 40px;
+  max-width: 150px;
+  background-image: url("/main/img/logo.svg");
+  background-repeat: no-repeat;
+}
+.footer__menu {
+  line-height: 1.5;
+}
+.footer__menu-title {
+  color: white;
+  padding-bottom: 1rem;
+}
+.footer__menu-item {
+  cursor: pointer;
+  display: block;
+  color: #c8c8cb;
+  text-decoration: none;
+}
+.footer__menu-item:hover {
+  text-decoration: underline;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #3e52a3;
 }
 
 /*# sourceMappingURL=styles.css.map */

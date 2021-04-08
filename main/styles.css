@@ -86,7 +86,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/main/img/bg-pattern-intro.svg");
+  background-image: url("../img/bg-pattern-intro.svg");
   background-size: 135%;
   background-repeat: no-repeat;
   background-position: center left;
@@ -102,7 +102,7 @@ body {
   flex: 1;
   height: 40px;
   max-width: 150px;
-  background-image: url("/main/img/logo.svg");
+  background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
 }
 .header__nav {
@@ -175,7 +175,7 @@ body {
   position: absolute;
   height: 100%;
   width: 50%;
-  background-image: url("/main/img/illustration-editor-desktop.svg");
+  background-image: url("../img/illustration-editor-desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right center;
@@ -199,7 +199,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/main/img/bg-pattern-circles.svg");
+  background-image: url("../img/bg-pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: -15rem -7rem;
   transform: rotateX(180deg);
@@ -218,7 +218,7 @@ body {
   position: absolute;
   width: 100%;
   height: 150%;
-  background-image: url("/main/img/illustration-phones.svg");
+  background-image: url("../img/illustration-phones.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 30%;
@@ -246,7 +246,7 @@ body {
   position: absolute;
   height: 100%;
   width: 50%;
-  background-image: url("/main/img/illustration-laptop-desktop.svg");
+  background-image: url("../img/illustration-laptop-desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
@@ -283,7 +283,7 @@ body {
 .footer__logo {
   height: 40px;
   max-width: 150px;
-  background-image: url("/main/img/logo.svg");
+  background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
 }
 .footer__menu {
